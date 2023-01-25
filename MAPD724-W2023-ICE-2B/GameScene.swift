@@ -28,7 +28,7 @@ class GameScene: SKScene {
         //add ocean
         ocean1 = Ocean()
         ocean2 = Ocean()
-        ocean2?.position.y = -773
+        ocean2?.position.y = -627
         addChild(ocean1!)
         addChild(ocean2!)
 

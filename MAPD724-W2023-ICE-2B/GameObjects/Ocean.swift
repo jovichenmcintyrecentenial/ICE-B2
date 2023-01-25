@@ -22,13 +22,13 @@ class Ocean:GameObject{
     }
     
     override func checkBounds() {
-        if(position.y <= -2107){
+        if(position.y <= -2253){
             reset()
         }
     }
     
     override func reset() {
-        position.y = 2107
+        position.y = 2253
     }
     
     func move(){
