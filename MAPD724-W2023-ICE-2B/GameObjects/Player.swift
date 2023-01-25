@@ -23,18 +23,18 @@ class Player:GameObject{
     override func checkBounds() {
 
         
-        if(position.x <= -255){
-            position.x = -255
+        if(position.x <= -320){
+            position.x = -320
         }
         
-        if(position.x >= 255){
-            position.x = 255
+        if(position.x >= 320){
+            position.x = 320
         }
         
     }
     
     override func reset() {
-        position.y = -495
+        position.y = -640
     }
     
     func touchesMove(point:CGPoint) {
