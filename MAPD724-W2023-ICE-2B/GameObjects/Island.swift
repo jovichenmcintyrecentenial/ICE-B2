@@ -12,7 +12,7 @@ class Island:GameObject{
     }
     
     override func start() {
-        zPosition = Layer.island
+        zPosition = Layer.island.rawValue
         verticalSpeed = 5
     }
     

@@ -12,7 +12,7 @@ class Player:GameObject{
     }
     
     override func start() {
-        zPosition = Layer.plane
+        zPosition = Layer.plane.rawValue
         verticalSpeed = 0.5
     }
     

@@ -12,7 +12,7 @@ class Ocean:GameObject{
     }
     
     override func start() {
-        zPosition = 0
+        zPosition = Layer.ocean.rawValue
         verticalSpeed = 5
     }
     
