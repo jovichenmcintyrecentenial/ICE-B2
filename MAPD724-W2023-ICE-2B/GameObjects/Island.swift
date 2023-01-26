@@ -17,12 +17,15 @@ class Island:GameObject{
     }
     
     override func checkBounds() {
-        
+        if(position.y <= -876){
+            reset()
+
+        }
     }
     
     override func update() {
         move()
-
+        checkBounds()
     }
     
     func move(){
@@ -31,7 +34,10 @@ class Island:GameObject{
     
 
     override func reset() {
-        position.y = -876
+        position.y = 876
+        let randX:Int = (randomSource?.nextInt(upperBound: 626))!-313
+        position.x = CGFloat(randX)
+        isColliding = false
     }
 
     

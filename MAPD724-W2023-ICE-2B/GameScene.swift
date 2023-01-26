@@ -16,6 +16,8 @@ class GameScene: SKScene {
     
     var ocean1:Ocean?
     var ocean2:Ocean?
+    var island:Island?
+
     var plane:Player?
     
     override func sceneDidLoad() {
@@ -24,7 +26,8 @@ class GameScene: SKScene {
         screenHeight = frame.height
 
         name = "GAME"
-        
+    
+
         //add ocean
         ocean1 = Ocean()
         ocean2 = Ocean()
@@ -35,6 +38,10 @@ class GameScene: SKScene {
         //add plan
         plane = Player()
         addChild(plane!)
+        
+        //add island
+        island = Island()
+        addChild(island!)
 
 
     }
@@ -79,6 +86,7 @@ class GameScene: SKScene {
         ocean1?.update()
         ocean2?.update()
         plane?.update()
+        island?.update()
 
 
     }
