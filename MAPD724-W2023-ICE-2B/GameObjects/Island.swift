@@ -12,15 +12,24 @@ class Island:GameObject{
     }
     
     override func start() {
-        zPosition = 1
+        zPosition = Layer.island
         verticalSpeed = 5
     }
     
+    override func checkBounds() {
+        
+    }
+    
     override func update() {
+        move()
 
     }
     
-  
+    func move(){
+        self.position.y -= verticalSpeed!
+    }
+    
+
     override func reset() {
         position.y = -876
     }
