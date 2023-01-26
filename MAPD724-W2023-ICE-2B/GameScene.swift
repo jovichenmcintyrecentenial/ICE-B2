@@ -17,6 +17,7 @@ class GameScene: SKScene {
     var ocean1:Ocean?
     var ocean2:Ocean?
     var island:Island?
+    var cloud:Cloud?
 
     var plane:Player?
     
@@ -42,6 +43,11 @@ class GameScene: SKScene {
         //add island
         island = Island()
         addChild(island!)
+        
+        
+        //add cloud
+        cloud = Cloud()
+        addChild(cloud!)
 
 
     }
@@ -87,6 +93,7 @@ class GameScene: SKScene {
         ocean2?.update()
         plane?.update()
         island?.update()
+        cloud?.update()
 
 
     }
