@@ -17,7 +17,7 @@ class GameScene: SKScene {
     var ocean1:Ocean?
     var ocean2:Ocean?
     var island:Island?
-    var cloud:Cloud?
+    var clouds:[Cloud] = []
 
     var plane:Player?
     
@@ -46,8 +46,11 @@ class GameScene: SKScene {
         
         
         //add cloud
-        cloud = Cloud()
-        addChild(cloud!)
+        for _ in 0...2 {
+            let cloud = Cloud()
+            clouds.append(cloud)
+            addChild(cloud)
+        }
 
 
     }
@@ -93,8 +96,11 @@ class GameScene: SKScene {
         ocean2?.update()
         plane?.update()
         island?.update()
-        cloud?.update()
-
+        //cloud update
+        for cloud in clouds {
+            cloud.update()
+           
+        }
 
     }
 }
